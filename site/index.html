@@ -4,626 +4,646 @@ title: fish shell
 {%- assign release = site.data.releases | first %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>fish shell</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A smart and user-friendly command line shell">
-  <meta name="author" content="ridiculous_fish">
-  <link href="assets/css/fish_style.css" rel="stylesheet" type="text/css">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <title>fish shell</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A smart and user-friendly command line shell">
+    <meta name="author" content="ridiculous_fish">
+    <link href="assets/css/fish_style.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
 
-<body class="gradient_body">
-<div class="container-narrow">
-  <img class="logo" src="assets/img/Terminal_Logo2_CRT_Flat.png" alt="Logo of Fish">
+<body class="gradient_body comic-sans">
+    <div class="container-narrow">
+        <img class="logo" src="assets/img/Terminal_Logo2_CRT_Flat.png" alt="Logo of Fish">
 
-  <div class="jumbotron">
-    <h1>
-      Finally, a command line shell for the 90s
-    </h1>
+        <div class="jumbotron">
+            <h1>
+                Finally, a command line shell for the 90s
+            </h1>
 
-    <p class="lead">
-      fish is a smart and user-friendly command line
-      shell for Linux, macOS, and the rest of the family.
-    </p>
-  </div>
+            <p class="lead">
+                fish is a smart and user-friendly command line
+                shell for Linux, macOS, and the rest of the family.
+            </p>
+        </div>
 
-  <hr>
+        <hr>
 
-  <div class="promo_table">
-      <div class="promo_table_cell">
-          <h3>Works Out of the Box</h3>
+        <div class="promo_table">
+            <div class="promo_table_cell">
+                <h3>Works Out of the Box</h3>
 
-          <div class="promo_image">
-              <a target="_blank" href="assets/img/screenshots/works_out_of_the_box.png">
-                  <img alt="A git clone followed by the completions for 'git checkout --track origin/', showing the origin's remote branches" src="assets/img/screenshots/works_out_of_the_box.png">
-              </a>
-          </div>
+                <div class="promo_image">
+                    <a target="_blank" href="assets/img/screenshots/works_out_of_the_box.png">
+                        <img alt="A git clone followed by the completions for 'git checkout --track origin/', showing the origin's remote branches"
+                            src="assets/img/screenshots/works_out_of_the_box.png">
+                    </a>
+                </div>
 
-          fish will delight you with features like tab completions and syntax highlighting that just work. It will make you exclaim "Of course fish does that!".
-      </div>
-      <div class="promo_table_cell">
-          <h3>Sensible Scripting</h3>
+                fish will delight you with features like tab completions and syntax highlighting that just work. It will
+                make you exclaim "Of course fish does that!".
+            </div>
+            <div class="promo_table_cell">
+                <h3>Sensible Scripting</h3>
 
-          <div class="promo_image">
-              <a target="_blank" href="assets/img/screenshots/scripting.png">
-                  <img alt="A demonstration of a switch/case tree that detects the OS" src="assets/img/screenshots/scripting.png">
-              </a>
-          </div>
+                <div class="promo_image">
+                    <a target="_blank" href="assets/img/screenshots/scripting.png">
+                        <img alt="A demonstration of a switch/case tree that detects the OS"
+                            src="assets/img/screenshots/scripting.png">
+                    </a>
+                </div>
 
-          fish is fully scriptable, and its syntax is simple, clean, and consistent.
-          You'll never write <span class="mono">esac</span> again.
-      </div>
+                fish is fully scriptable, and its syntax is simple, clean, and consistent.
+                You'll never write <span class="mono">esac</span> again.
+            </div>
 
-      <div class="promo_table_cell">
-          <h3>Reads Your Mind</h3>
+            <div class="promo_table_cell">
+                <h3>Reads Your Mind</h3>
 
-          <div class="promo_image">
-              <a target="_blank" href="assets/img/screenshots/autosuggestion.png">
-                  <img alt="fish shows suggestions based on files, completions and your history. In this case it offers to turn 'ssh -' into 'ssh -l demo SomeLongHost@SomeLongDomainIAlwaysMisspell.com', and you can accept it with right arrow or control-F" src="assets/img/screenshots/autosuggestion.png">
-              </a>
-          </div>
+                <div class="promo_image">
+                    <a target="_blank" href="assets/img/screenshots/autosuggestion.png">
+                        <img alt="fish shows suggestions based on files, completions and your history. In this case it offers to turn 'ssh -' into 'ssh -l demo SomeLongHost@SomeLongDomainIAlwaysMisspell.com', and you can accept it with right arrow or control-F"
+                            src="assets/img/screenshots/autosuggestion.png">
+                    </a>
+                </div>
 
-          fish suggests commands as you type based on history and completions, just like a web browser.
-          Watch out, Netscape Navigator 4.0!
-      </div>
+                fish suggests commands as you type based on history and completions, just like a web browser.
+                Watch out, Netscape Navigator 4.0!
+            </div>
 
-      <div class="promo_table_cell promo_table_left">
-          <h3>Abbreviations</h3>
+            <div class="promo_table_cell promo_table_left">
+                <h3>Abbreviations</h3>
 
-          <div class="promo_image">
-              <video controls src="assets/img/screenshots/abbr.webm" alt="A screencast showing the definition of two abbrevations. The first, 'abbr --add foo echo bar' turns 'foo' into 'echo bar', the second turns any run of at least two periods into a cd command for as many directories as periods up. You can find the full source in the interactive documentation, search for 'multicd'">
-          </div>
-          Tired of writing many characters when few would do?
-          Fish allows you to abbreviate!
-      </div>
+                <div class="promo_image">
+                    <video controls src="assets/img/screenshots/abbr.webm"
+                        alt="A screencast showing the definition of two abbrevations. The first, 'abbr --add foo echo bar' turns 'foo' into 'echo bar', the second turns any run of at least two periods into a cd command for as many directories as periods up. You can find the full source in the interactive documentation, search for 'multicd'">
+                </div>
+                Tired of writing many characters when few would do?
+                Fish allows you to abbreviate!
+            </div>
 
-      <div class="promo_table_cell">
-          <h3>Glorious VGA Color</h3>
+            <div class="promo_table_cell">
+                <h3>Glorious VGA Color</h3>
 
-          <div class="promo_image">
-              <a target="_blank" href="assets/img/screenshots/colors.png">
-                  <img alt="A colorful commandline, with syntax highlighting" src="assets/img/screenshots/colors.png">
-              </a>
-          </div>
+                <div class="promo_image">
+                    <a target="_blank" href="assets/img/screenshots/colors.png">
+                        <img alt="A colorful commandline, with syntax highlighting"
+                            src="assets/img/screenshots/colors.png">
+                    </a>
+                </div>
 
-          fish supports 24 bit true color, the state of the art in terminal technology.
-		  Behold the monospaced rainbow.
-      </div>
+                fish supports 24 bit true color, the state of the art in terminal technology.
+                Behold the monospaced rainbow.
+            </div>
 
-      <div class="promo_table_cell">
-          <h3>Web Based Configuration</h3>
+            <div class="promo_table_cell">
+                <h3>Web Based Configuration</h3>
 
-          <div class="promo_image">
-              <a target="_blank" href="assets/img/screenshots/web_config.png">
-                  <img alt="Fish's web config tool, on the prompt selection tab" src="assets/img/screenshots/web_config.png">
-              </a>
-          </div>
+                <div class="promo_image">
+                    <a target="_blank" href="assets/img/screenshots/web_config.png">
+                        <img alt="Fish's web config tool, on the prompt selection tab"
+                            src="assets/img/screenshots/web_config.png">
+                    </a>
+                </div>
 
-          For those lucky few with a graphical computer, you can set your colors and view functions, variables, and
-          history all from a web page. Or not, you can also stay in your comfy terminal and set them there.
-      </div>
+                For those lucky few with a graphical computer, you can set your colors and view functions, variables,
+                and
+                history all from a web page. Or not, you can also stay in your comfy terminal and set them there.
+            </div>
 
-  </div>
+        </div>
 
-  <hr>
+        <hr>
 
-  <h2>Teach me to fish</h2>
+        <h2>Teach me to fish</h2>
 
-  <a href="docs/current/tutorial.html" class="btn btn-large tutorial-link">Tutorial</a>
-  <a href="docs/current/index.html" class="btn btn-large docs-link">Documentation</a>
-  <a href="docs/current/faq.html" class="btn btn-large faq-link">FAQ</a>
-  <a href="blog/index.html" class="btn btn-large blog-link">Blog</a>
-  <!-- Commented out until/unless rootnroll updates to 3.2 -->
-  <!-- <a href="https://rootnroll.com/d/fish-shell/" class="btn btn-large playground-link">Try in Browser</a> -->
+        <a href="docs/current/tutorial.html" class="btn btn-large tutorial-link">Tutorial</a>
+        <a href="docs/current/index.html" class="btn btn-large docs-link">Documentation</a>
+        <a href="docs/current/faq.html" class="btn btn-large faq-link">FAQ</a>
+        <a href="blog/index.html" class="btn btn-large blog-link">Blog</a>
+        <!-- Commented out until/unless rootnroll updates to 3.2 -->
+        <!-- <a href="https://rootnroll.com/d/fish-shell/" class="btn btn-large playground-link">Try in Browser</a> -->
 
 
-  <hr>
+        <hr>
 
-  <h2>Go fish</h2>
+        <h2>Go fish</h2>
 
-  <!-- These are fake radiobuttons triggered by clicking on the *label*,
+        <!-- These are fake radiobuttons triggered by clicking on the *label*,
        some css then displays the selected tab and marks the label active -->
-  <input class="tabselector" name="tabselector" type="radio" id="tab1">
-  <input class="tabselector" name="tabselector" type="radio" id="tab2">
-  <input class="tabselector" name="tabselector" type="radio" id="tab3">
-  <input class="tabselector" name="tabselector" type="radio" id="tab4">
-  <input class="tabselector" name="tabselector" type="radio" id="tab5" checked>
-  <ul id="platform_tabs" class="nav nav-tabs">
-    <li><label for="tab1" class="tab1">macOS</label></li>
-    <li><label for="tab2" class="tab2">Linux</label></li>
-    <li><label for="tab3" class="tab3">BSD</label></li>
-    <li><label for="tab4" class="tab4">Windows</label></li>
-    <li><label for="tab5" class="tab5">Sources</label></li>
-  </ul>
+        <input class="tabselector" name="tabselector" type="radio" id="tab1">
+        <input class="tabselector" name="tabselector" type="radio" id="tab2">
+        <input class="tabselector" name="tabselector" type="radio" id="tab3">
+        <input class="tabselector" name="tabselector" type="radio" id="tab4">
+        <input class="tabselector" name="tabselector" type="radio" id="tab5" checked>
+        <ul id="platform_tabs" class="nav nav-tabs">
+            <li><label for="tab1" class="tab1">macOS</label></li>
+            <li><label for="tab2" class="tab2">Linux</label></li>
+            <li><label for="tab3" class="tab3">BSD</label></li>
+            <li><label for="tab4" class="tab4">Windows</label></li>
+            <li><label for="tab5" class="tab5">Sources</label></li>
+        </ul>
 
-  <div class="tab-content download_tabs over-pos">
-    <div class="download_tab block_links tab-pane active" id="get_fish_osx">
-      <div>
-        <h3>
-          <a class="tab_link" href="https://brew.sh">Homebrew</a>
-        </h3>
+        <div class="tab-content download_tabs over-pos">
+            <div class="download_tab block_links tab-pane active" id="get_fish_osx">
+                <div>
+                    <h3>
+                        <a class="tab_link" href="https://brew.sh">Homebrew</a>
+                    </h3>
 
-        <p>
-          <a class="tab_link" href="https://brew.sh">
-            <img src="assets/img/brew_icon.png" alt="Brew Icon">
-          </a>
-        </p>
+                    <p>
+                        <a class="tab_link" href="https://brew.sh">
+                            <img src="assets/img/brew_icon.png" alt="Brew Icon">
+                        </a>
+                    </p>
 
-        <p>
-          <span class="mono">brew install fish</span>
-        </p>
-      </div>
+                    <p>
+                        <span class="mono">brew install fish</span>
+                    </p>
+                </div>
 
-      <div>
-        <h3>
-          <a class="tab_link" href="https://www.macports.org">MacPorts</a>
-        </h3>
+                <div>
+                    <h3>
+                        <a class="tab_link" href="https://www.macports.org">MacPorts</a>
+                    </h3>
 
-        <p>
-          <a class="tab_link" href="https://www.macports.org">
-            <img class="logofix" src="assets/img/MacPorts.png" alt="MacPorts Icon">
-          </a>
-        </p>
+                    <p>
+                        <a class="tab_link" href="https://www.macports.org">
+                            <img class="logofix" src="assets/img/MacPorts.png" alt="MacPorts Icon">
+                        </a>
+                    </p>
 
-        <p>
-          <span class="mono">sudo port install fish</span>
-        </p>
-      </div>
-      <br>
+                    <p>
+                        <span class="mono">sudo port install fish</span>
+                    </p>
+                </div>
+                <br>
 
-      <div>
-        <h3>
-          <a class="tab_link" href="{{release.md_mac_pkg_url}}">Installer</a>
-        </h3>
+                <div>
+                    <h3>
+                        <a class="tab_link" href="{{release.md_mac_pkg_url}}">Installer</a>
+                    </h3>
 
-        <p>
-          <a class="tab_link" href="{{release.md_mac_pkg_url}}">
-            <img src="assets/img/package_icon.png" alt="Package Icon">
-          </a>
-        </p>
+                    <p>
+                        <a class="tab_link" href="{{release.md_mac_pkg_url}}">
+                            <img src="assets/img/package_icon.png" alt="Package Icon">
+                        </a>
+                    </p>
 
-        <p>
-          <small>
-            10.9+, Intel or Apple silicon<br>
-            Installs to <span class="mono">/usr/local/</span>
-          </small>
-        </p>
-      </div>
+                    <p>
+                        <small>
+                            10.9+, Intel or Apple silicon<br>
+                            Installs to <span class="mono">/usr/local/</span>
+                        </small>
+                    </p>
+                </div>
 
-      <div class="">
-        <h3>
-          <a class="tab_link" href="{{release.md_mac_app_url}}">App</a>
-        </h3>
+                <div class="">
+                    <h3>
+                        <a class="tab_link" href="{{release.md_mac_app_url}}">App</a>
+                    </h3>
 
-        <p>
-          <a class="tab_link" href="{{release.md_mac_app_url}}">
-            <img src="assets/img/Terminal_Logo_LCD_Small.png" alt="Terminal logo">
-          </a>
-        </p>
+                    <p>
+                        <a class="tab_link" href="{{release.md_mac_app_url}}">
+                            <img src="assets/img/Terminal_Logo_LCD_Small.png" alt="Terminal logo">
+                        </a>
+                    </p>
 
-        <p>
-          <small>
-            10.9+, Intel or Apple silicon
-            <br>
-            <a href="#" onclick="document.getElementById('app_explanation').style.display = 'block'; return false;">
-              No installation required
-            </a>
-          </small>
-        </p>
+                    <p>
+                        <small>
+                            10.9+, Intel or Apple silicon
+                            <br>
+                            <a href="#"
+                                onclick="document.getElementById('app_explanation').style.display = 'block'; return false;">
+                                No installation required
+                            </a>
+                        </small>
+                    </p>
 
-        <div id="app_explanation" class="arrow_box"
-             onclick="document.getElementById('app_explanation').style.display = 'none'; return false;">
-          fish.app bundles the fish shell with an AppleScript that launches it in Terminal.
-          <br>
-          Nothing is installed.
+                    <div id="app_explanation" class="arrow_box"
+                        onclick="document.getElementById('app_explanation').style.display = 'none'; return false;">
+                        fish.app bundles the fish shell with an AppleScript that launches it in Terminal.
+                        <br>
+                        Nothing is installed.
+                    </div>
+                </div>
+            </div>
+
+            <div class="download_tab linux_tabs tab-pane" id="get_fish_linux">
+                <div>
+                    <p>
+                        <img class="logofix" src="assets/img/ubu_icon.png" alt="Ubuntu">
+                    </p>
+
+                    <p>
+                        <a href="https://launchpad.net/~fish-shell/+archive/ubuntu/release-3">Subscribe</a> or <a
+                            href="https://launchpad.net/~fish-shell/+archive/ubuntu/release-3/+packages">Download</a>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <img class="logofix" src="assets/img/deb_icon.png" alt="Debian">
+                    </p>
+
+                    <p>
+                        <a
+                            href="https://software.opensuse.org/download.html?project=shells%3Afish%3Arelease%3A3&package=fish">
+                            Subscribe or Download
+                        </a>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <img class="logofix" src="assets/img/fed_icon.png" alt="Fedora">
+                    </p>
+
+                    <p>
+                        <a href="https://packages.fedoraproject.org/pkgs/fish/fish/">Packages</a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">dnf install fish</span>
+                        </small>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <img src="assets/img/opensuse.svg" alt="openSUSE">
+                    </p>
+
+                    <p>
+                        <a
+                            href="https://software.opensuse.org/download.html?project=shells%3Afish%3Arelease%3A3&package=fish">
+                            Subscribe or Download
+                        </a>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <img class="light" src="assets/img/centos-logo-light-vertical.svg" alt="CentOS">
+                        <img class="dark" src="assets/img/centos-logo-dark-vertical.svg" alt="CentOS">
+                    </p>
+
+                    <p>
+                        <a
+                            href="https://software.opensuse.org/download.html?project=shells%3Afish%3Arelease%3A3&package=fish">
+                            Subscribe or Download
+                        </a>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <img src="assets/img/arch.svg" alt="Arch Linux">
+                    </p>
+
+                    <p>
+                        <a href="https://www.archlinux.org/packages/extra/x86_64/fish/">Packages</a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">pacman -S fish</span>
+                        </small>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <img class="logofix" src="assets/img/gentoo_icon.png" alt="Gentoo">
+                    </p>
+
+                    <p>
+                        <a href="https://packages.gentoo.org/packages/app-shells/fish">Packages</a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">emerge fish</span>
+                        </small>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <img class="logofix" src="assets/img/void_icon.png" alt="Void">
+                    </p>
+
+                    <p>
+                        <a
+                            href="https://github.com/void-linux/void-packages/tree/master/srcpkgs/fish-shell">Packages</a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">xbps-install fish-shell</span>
+                        </small>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <img class="logofix" src="assets/img/nixos_icon.svg" alt="NixOS">
+                    </p>
+                    <p>
+                        <a href="https://github.com/NixOS/nixpkgs/blob/master/pkgs/shells/fish/default.nix">Packages</a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">nix-env -i fish</span>
+                        </small>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <img class="logofix" src="assets/img/guix_icon.svg" alt="GNU Guix">
+                    </p>
+                    <p>
+                        <a href="https://packages.guix.gnu.org/packages/fish/">Packages</a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">guix package -i fish</span>
+                        </small>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <img src="assets/img/solus_icon.svg" alt="Solus Project">
+                    </p>
+                    <p>
+                        <a href="https://dev.getsol.us/source/fish/">Packages</a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">eopkg install fish</span>
+                        </small>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <img src="assets/img/brew_icon.png" alt="Brew Icon">
+                    </p>
+                    <p>
+                        <a href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/f/fish.rb">Homebrew</a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">brew install fish</span>
+                        </small>
+                    </p>
+                </div>
+            </div>
+
+            <div class="download_tab tab-pane" id="get_fish_bsd">
+                <div>
+                    <h3>
+                        <a class="tab_link" href="https://www.freshports.org/shells/fish/">FreeBSD</a>
+                    </h3>
+
+                    <p>
+                        <a class="tab_link" href="https://www.freshports.org/shells/fish/">
+                            <img src="assets/img/freebsd_icon.png" alt="FreeBSD">
+                        </a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">pkg install fish</span>
+                        </small>
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        <a class="tab_link" href="https://netbsd.org">NetBSD</a>
+                    </h3>
+
+                    <p>
+                        <a class="tab_link" href="https://netbsd.org">
+                            <img src="assets/img/netbsd_icon.png" alt="NetBSD">
+                        </a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">pkgin install fish</span>
+                        </small>
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        <a class="tab_link" href="https://openbsd.org">OpenBSD</a>
+                    </h3>
+
+                    <p>
+                        <a class="tab_link" href="https://openbsd.org">
+                            <img src="assets/img/openbsd_icon.png" alt="">
+                        </a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">pkg_add fish</span>
+                        </small>
+                    </p>
+                </div>
+            </div>
+
+            <div class="download_tab tab-pane" id="get_fish_windows">
+                <div>
+                    <h3>
+                        <a class="tab_link" href="https://cygwin.com">Cygwin</a>
+                    </h3>
+
+                    <p>
+                        <a class="tab_link" href="https://cygwin.com">
+                            <img src="assets/img/cyg_icon.png" alt="Cygwin">
+                        </a>
+                    </p>
+
+                    <p>
+                        fish is available in <b>setup</b>,<br>in the Shells category.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>
+                        <a class="tab_link" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows
+                            Subsystem for Linux</a>
+                    </h3>
+
+                    <p>
+                        <a class="tab_link" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">
+                            <img class="logofix" src="assets/img/win_icon.png" alt="Windows">
+                        </a>
+                    </p>
+
+                    <p>
+                        Use packages for <a href="#get_fish_linux"
+                            onclick="$('#platform_tabs a[href=#get_fish_linux]').tab('show'); return false;">your<br>installed
+                            Linux distribution</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>
+                        <a class="tab_link" href="https://msys2.github.io/">MSYS2</a>
+                    </h3>
+
+                    <p>
+                        <a class="tab_link" href="https://msys2.github.io/">
+                            <img src="assets/img/msys2_icon.png" alt="MSYS2">
+                        </a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">pacman -S fish</span>
+                        </small>
+                    </p>
+                </div>
+            </div>
+
+            <div class="download_tab block_links tab-pane" id="get_fish_source">
+                <div>
+                    <h3>
+                        <a class="tab_link" href="{{release.md_tarball_url}}">{{release.md_tarball_name}}</a>
+                    </h3>
+
+                    <p>
+                        <a class="tab_link" href="{{release.md_tarball_url}}">
+                            <img src="assets/img/tarball_icon.png" alt="Tarball Icon">
+                        </a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">cmake .; make; sudo make install</span>
+                        </small>
+                    </p>
+
+                    <p class="app-filesize">
+                        <small>File size: 6.2 MB</small>
+                    </p>
+
+                    <p>
+                        <small>
+                            SHA256: <span class="mono app-sha256">{{ release.md_tarball_sha256 }}</span>
+                        </small>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>
+                        <a class="tab_link" href="https://github.com/fish-shell/fish-shell/">Git master</a>
+                    </h3>
+
+                    <p>
+                        <a class="tab_link" href="https://git-scm.com/">
+                            <img src="assets/img/git_icon.png" alt="Git">
+                        </a>
+                    </p>
+
+                    <p>
+                        <small>
+                            <span class="mono">git clone https://github.com/fish-shell/fish-shell.git<br>
+                                cd fish-shell; cmake .; make; sudo make install
+                            </span>
+                            <br>
+                            (Installation from the bleeding edge, for developers and advanced users.)
+                        </small>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="download_tab linux_tabs tab-pane" id="get_fish_linux">
-      <div>
-        <p>
-          <img class="logofix" src="assets/img/ubu_icon.png" alt="Ubuntu">
-        </p>
+        <hr>
+
+        <h2>Release History</h2>
 
         <p>
-          <a href="https://launchpad.net/~fish-shell/+archive/ubuntu/release-3">Subscribe</a> or <a
-          href="https://launchpad.net/~fish-shell/+archive/ubuntu/release-3/+packages">Download</a>
-        </p>
-      </div>
-
-      <div>
-        <p>
-          <img class="logofix" src="assets/img/deb_icon.png" alt="Debian">
+            <a href="docs/current/relnotes.html" class="release-notes-title"><b>Release Notes</b></a>
         </p>
 
-        <p>
-          <a href="https://software.opensuse.org/download.html?project=shells%3Afish%3Arelease%3A3&package=fish">
-            Subscribe or Download
-          </a>
-        </p>
-      </div>
+        <ul class="releases-list">
+            {%- for rel in site.data.releases %}
+            <li>
+                {{ rel.tag_name }}, released {{ rel.published_at | date: '%B %e, %Y' }}
+                <small>(<a href="{{ rel.md_tarball_url }}">tarball</a>
+                    {%- if site.data.release_comments[rel.tag_name] %}
+                    - {{ site.data.release_comments[rel.tag_name] }}
+                    {%- endif %})
+                </small>
+            </li>
+            {%- endfor %}
+        </ul>
+        <hr>
 
-      <div>
-        <p>
-          <img class="logofix" src="assets/img/fed_icon.png" alt="Fedora">
-        </p>
+        <h2>Development</h2>
 
-        <p>
-          <a href="https://packages.fedoraproject.org/pkgs/fish/fish/">Packages</a>
-        </p>
+        fish development is <a href="https://github.com/fish-shell/fish-shell">hosted on GitHub</a>.
 
-        <p>
-          <small>
-            <span class="mono">dnf install fish</span>
-          </small>
-        </p>
-      </div>
-
-      <div>
-        <p>
-          <img src="assets/img/opensuse.svg" alt="openSUSE">
-        </p>
-
-        <p>
-          <a href="https://software.opensuse.org/download.html?project=shells%3Afish%3Arelease%3A3&package=fish">
-            Subscribe or Download
-          </a>
-        </p>
-      </div>
-
-      <div>
-        <p>
-          <img class="light" src="assets/img/centos-logo-light-vertical.svg" alt="CentOS">
-          <img class="dark" src="assets/img/centos-logo-dark-vertical.svg" alt="CentOS">
-        </p>
-
-        <p>
-          <a href="https://software.opensuse.org/download.html?project=shells%3Afish%3Arelease%3A3&package=fish">
-            Subscribe or Download
-          </a>
-        </p>
-      </div>
-
-      <div>
-        <p>
-          <img src="assets/img/arch.svg" alt="Arch Linux">
-        </p>
-
-        <p>
-          <a href="https://www.archlinux.org/packages/extra/x86_64/fish/">Packages</a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">pacman -S fish</span>
-          </small>
-        </p>
-      </div>
-
-      <div>
-        <p>
-          <img class="logofix" src="assets/img/gentoo_icon.png" alt="Gentoo">
-        </p>
-
-        <p>
-          <a href="https://packages.gentoo.org/packages/app-shells/fish">Packages</a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">emerge fish</span>
-          </small>
-        </p>
-      </div>
-      <div>
-        <p>
-          <img class="logofix" src="assets/img/void_icon.png" alt="Void">
-        </p>
-
-        <p>
-          <a href="https://github.com/void-linux/void-packages/tree/master/srcpkgs/fish-shell">Packages</a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">xbps-install fish-shell</span>
-          </small>
-        </p>
-      </div>
-      <div>
-        <p>
-          <img class="logofix" src="assets/img/nixos_icon.svg" alt="NixOS">
-        </p>
-        <p>
-          <a href="https://github.com/NixOS/nixpkgs/blob/master/pkgs/shells/fish/default.nix">Packages</a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">nix-env -i fish</span>
-          </small>
-        </p>
-      </div>
-      <div>
-        <p>
-          <img class="logofix" src="assets/img/guix_icon.svg" alt="GNU Guix">
-        </p>
-        <p>
-          <a href="https://packages.guix.gnu.org/packages/fish/">Packages</a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">guix package -i fish</span>
-          </small>
-        </p>
-      </div>
-      <div>
-        <p>
-          <img src="assets/img/solus_icon.svg" alt="Solus Project">
-        </p>
-        <p>
-          <a href="https://dev.getsol.us/source/fish/">Packages</a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">eopkg install fish</span>
-          </small>
-        </p>
-      </div>
-      <div>
-          <p>
-            <img src="assets/img/brew_icon.png" alt="Brew Icon">
-          </p>
-          <p>
-            <a href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/f/fish.rb">Homebrew</a>
-          </p>
-
-          <p>
-            <small>
-              <span class="mono">brew install fish</span>
-            </small>
-          </p>
+        To clone the git repository:
+        <div class="mono from-git">
+            git clone https://github.com/fish-shell/fish-shell.git
         </div>
+
+        Build instructions are provided at the
+        <a href="https://github.com/fish-shell/fish-shell/#building">bottom of the GitHub page</a>.
+
+        <hr>
+
+        <h2>Need Help?</h2>
+
+        <ul class="boldlinks">
+            <li><a href="https://matrix.to/#/#fish-shell:matrix.org">matrix channel</a> for quick questions</li>
+            <li><a href="https://lists.sourceforge.net/lists/listinfo/fish-users">Official fish mailing list</a></li>
+            <li><a href="https://unix.stackexchange.com/questions/tagged/fish">Unix & Linux Stackexchange</a> for
+                questions.
+            <li><a href="https://github.com/fish-shell/fish-shell/issues">GitHub issues page</a> for when you find a bug
+                or have an awesome idea!</li>
+        </ul>
     </div>
 
-    <div class="download_tab tab-pane" id="get_fish_bsd">
-      <div>
-        <h3>
-          <a class="tab_link" href="https://www.freshports.org/shells/fish/">FreeBSD</a>
-        </h3>
+    <script>
+        (function () {
+            // Show correct tab
 
-        <p>
-          <a class="tab_link" href="https://www.freshports.org/shells/fish/">
-            <img src="assets/img/freebsd_icon.png" alt="FreeBSD">
-          </a>
-        </p>
+            var plat = navigator.platform.toUpperCase();
+            var isMac = plat.indexOf('MAC') !== -1;
+            var isLinux = plat.indexOf('LINUX') !== -1;
+            var isBSD = plat.indexOf('BSD') !== -1;
+            var isWindows = plat.indexOf('WINDOWS') !== -1;
 
-        <p>
-          <small>
-            <span class="mono">pkg install fish</span>
-          </small>
-        </p>
-      </div>
-      <div>
-        <h3>
-          <a class="tab_link" href="https://netbsd.org">NetBSD</a>
-        </h3>
+            var which = 'tab5';
+            if (isMac) {
+                which = 'tab1';
+            } else if (isLinux) {
+                which = 'tab2';
+            } else if (isBSD) {
+                which = 'tab3';
+            } else if (isWindows) {
+                which = 'tab4';
+            }
 
-        <p>
-          <a class="tab_link" href="https://netbsd.org">
-            <img src="assets/img/netbsd_icon.png" alt="NetBSD">
-          </a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">pkgin install fish</span>
-          </small>
-        </p>
-      </div>
-      <div>
-        <h3>
-          <a class="tab_link" href="https://openbsd.org">OpenBSD</a>
-        </h3>
-
-        <p>
-          <a class="tab_link" href="https://openbsd.org">
-            <img src="assets/img/openbsd_icon.png" alt="">
-          </a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">pkg_add fish</span>
-          </small>
-        </p>
-      </div>
-    </div>
-
-    <div class="download_tab tab-pane" id="get_fish_windows">
-      <div>
-        <h3>
-          <a class="tab_link" href="https://cygwin.com">Cygwin</a>
-        </h3>
-
-        <p>
-          <a class="tab_link" href="https://cygwin.com">
-            <img src="assets/img/cyg_icon.png" alt="Cygwin">
-          </a>
-        </p>
-
-        <p>
-          fish is available in <b>setup</b>,<br>in the Shells category.
-        </p>
-      </div>
-
-      <div>
-        <h3>
-          <a class="tab_link" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux</a>
-        </h3>
-
-        <p>
-          <a class="tab_link" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">
-            <img class="logofix" src="assets/img/win_icon.png" alt="Windows">
-          </a>
-        </p>
-
-        <p>
-	Use packages for <a href="#get_fish_linux" onclick="$('#platform_tabs a[href=#get_fish_linux]').tab('show'); return false;">your<br>installed Linux distribution</a>
-        </p>
-      </div>
-
-      <div>
-        <h3>
-          <a class="tab_link" href="https://msys2.github.io/">MSYS2</a>
-        </h3>
-
-        <p>
-          <a class="tab_link" href="https://msys2.github.io/">
-            <img src="assets/img/msys2_icon.png" alt="MSYS2">
-          </a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">pacman -S fish</span>
-          </small>
-        </p>
-      </div>
-    </div>
-
-    <div class="download_tab block_links tab-pane" id="get_fish_source">
-      <div>
-        <h3>
-          <a class="tab_link" href="{{release.md_tarball_url}}">{{release.md_tarball_name}}</a>
-        </h3>
-
-        <p>
-          <a class="tab_link" href="{{release.md_tarball_url}}">
-            <img src="assets/img/tarball_icon.png" alt="Tarball Icon">
-          </a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">cmake .; make; sudo make install</span>
-          </small>
-        </p>
-
-        <p class="app-filesize">
-          <small>File size: 6.2 MB</small>
-        </p>
-
-        <p>
-          <small>
-            SHA256: <span class="mono app-sha256">{{ release.md_tarball_sha256 }}</span>
-          </small>
-        </p>
-      </div>
-
-      <div>
-        <h3>
-          <a class="tab_link" href="https://github.com/fish-shell/fish-shell/">Git master</a>
-        </h3>
-
-        <p>
-          <a class="tab_link" href="https://git-scm.com/">
-            <img src="assets/img/git_icon.png" alt="Git">
-          </a>
-        </p>
-
-        <p>
-          <small>
-            <span class="mono">git clone https://github.com/fish-shell/fish-shell.git<br>
-              cd fish-shell; cmake .; make; sudo make install
-            </span>
-	    <br>
-	    (Installation from the bleeding edge, for developers and advanced users.)
-          </small>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <h2>Release History</h2>
-
-  <p>
-    <a href="docs/current/relnotes.html" class="release-notes-title"><b>Release Notes</b></a>
-  </p>
-
-  <ul class="releases-list">
-    {%- for rel in site.data.releases %}
-      <li>
-        {{ rel.tag_name }}, released {{ rel.published_at | date: '%B %e, %Y' }}
-        <small>(<a href="{{ rel.md_tarball_url }}">tarball</a>
-          {%- if site.data.release_comments[rel.tag_name] %}
-            - {{ site.data.release_comments[rel.tag_name] }}
-          {%- endif %})
-        </small>
-      </li>
-    {%- endfor %}
-  </ul>
-  <hr>
-
-  <h2>Development</h2>
-
-  fish development is <a href="https://github.com/fish-shell/fish-shell">hosted on GitHub</a>.
-
-  To clone the git repository:
-  <div class="mono from-git">
-    git clone https://github.com/fish-shell/fish-shell.git
-  </div>
-
-  Build instructions are provided at the
-  <a href="https://github.com/fish-shell/fish-shell/#building">bottom of the GitHub page</a>.
-
-  <hr>
-
-  <h2>Need Help?</h2>
-
-  <ul class="boldlinks">
-    <li><a href="https://matrix.to/#/#fish-shell:matrix.org">matrix channel</a> for quick questions</li>
-    <li><a href="https://lists.sourceforge.net/lists/listinfo/fish-users">Official fish mailing list</a></li>
-    <li><a href="https://unix.stackexchange.com/questions/tagged/fish">Unix & Linux Stackexchange</a> for questions.
-    <li><a href="https://github.com/fish-shell/fish-shell/issues">GitHub issues page</a> for when you find a bug or have an awesome idea!</li>
-  </ul>
-</div>
-
-<script>
-  (function () {
-    // Show correct tab
-
-    var plat = navigator.platform.toUpperCase();
-    var isMac = plat.indexOf('MAC') !== -1;
-    var isLinux = plat.indexOf('LINUX') !== -1;
-    var isBSD = plat.indexOf('BSD') !== -1;
-    var isWindows = plat.indexOf('WINDOWS') !== -1;
-
-    var which = 'tab5';
-    if (isMac) {
-      which = 'tab1';
-    } else if (isLinux) {
-      which = 'tab2';
-    } else if (isBSD) {
-      which = 'tab3';
-    } else if (isWindows) {
-      which = 'tab4';
-    }
-
-    document.querySelector("#" + which).checked = true;
-  })();
-</script>
+            document.querySelector("#" + which).checked = true;
+        })();
+    </script>
 
 </body>
+
 </html>
